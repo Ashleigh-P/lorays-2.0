@@ -182,9 +182,9 @@ html {
 
 /*-- option 1 --*/
 .updates {
-    width: 35%;
+    width: 32%;
     margin: 5px;
-    background: rgba(0, 0, 0, 0.46);
+    background: #34cfff4d;
     color: #ffffff;
     padding: 10px;
     border-radius: 10px;
