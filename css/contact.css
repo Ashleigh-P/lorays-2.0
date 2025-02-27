@@ -344,6 +344,11 @@ main {
 
 
 @media only screen and (max-width: 768px) {
+
+    .copy {
+        font-size: 1rem;
+    }
+
     .email-container {
         position: absolute;
         text-align: center;

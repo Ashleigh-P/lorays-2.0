@@ -292,8 +292,15 @@ h1 {
         text-align: center;
     }
 
+    .close-map-button {
+        position: absolute;
+        top: -40px;
+        right: 0;
+    }
+
     .map iframe {
-        height: 200px;
+        width: 250px;
+        height: 215px;
     }
 
     .navbar {
