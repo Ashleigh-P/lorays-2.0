@@ -1,0 +1,521 @@
+.orbitron-lorays {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Orbitron", sans-serif;
+    background-image: url('../img/band1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    background-color: #001409;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+    box-shadow: none;
+    background-color: transparent;
+    height: 80px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navigation Links */
+.nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-links .active {
+    display: none;
+}
+
+.nav-links:first-child {
+    justify-content: flex-end;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li {
+    margin: 0 30px;
+}
+
+.nav-links ul li a {
+    font-size: 1.4rem;
+    letter-spacing: 0.15rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.nav-links ul li a:hover {
+    color: #000000;
+}
+
+
+.logo {
+    flex: 0;
+    text-align: center;
+    margin: 0 auto;
+    background: #000000a4;
+    border-radius: 10px;
+
+}
+
+.logo img {
+    height: 85px;
+    transition: height 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(6, 94, 116, 0.874);
+    height: 85px;
+    padding: 0;
+}
+
+.navbar.scrolled .logo img {
+    height: 70px;
+}
+
+/*---dropdown menu ---*/
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-links {
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 0;
+    left: 0;
+    background-color: rgba(21, 200, 245, 0.9);
+    z-index: 999;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hamburger-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+.hamburger-links ul li {
+    margin: 10px 0;
+}
+
+.hamburger-links ul li a {
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.hamburger-links ul li a:hover {
+    color: #0dbcf6;
+}
+
+.hamburger-menu.active+.hamburger-links {
+    display: none;
+}
+
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.logo {
+    width: 100%;
+    position: relative;
+}
+
+main {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+.menu-btn {
+    color: #00f2ff;
+    display: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.button-container {
+    display: flex;
+    gap: 3rem;
+}
+
+.call-us,
+.email-us {
+    font-family: "Orbitron", sans-serif !important;
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #2e293b, #04acf4);
+    color: #f3f0f0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 2rem;
+    box-shadow: 0 0 15px rgb(60, 149, 179), 0 0 20px rgb(241, 243, 245);
+}
+
+.call-us:hover,
+.email-us:hover {
+    background: linear-gradient(45deg #e6e6e6, #34e1ff);
+
+    box-shadow: 0 0 20px rgb(238, 17, 227), 0 0 30px rgba(6, 182, 212, 0.8);
+
+}
+
+.call-us:active,
+.email-us:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 15px rgb(59, 159, 246), 0 0 20px rgba(212, 6, 202, 0.5);
+}
+
+.call-us a,
+.email-us a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.call-us a:hover,
+.email-us a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 15rem;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0.8rem;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.call-button {
+    background-color: #68d7f5;
+}
+
+.call-button:hover {
+    background-color: #000000;
+}
+
+.email-button {
+    background-color: #000000;
+}
+
+.email-button:hover {
+    background-color: #000000;
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+
+.email-container {
+    position: relative;
+    text-align: center;
+    bottom: 30%;
+}
+
+.email-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 21%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 3.4rem;
+}
+
+.below-text {
+    margin-top: 10px;
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+    background-color: #065e7498;
+    border-radius: 20px;
+}
+
+.fa-brands {
+    color: #fff;
+    height: auto;
+    font-size: 2rem;
+    width: 3rem;
+    margin-top: 1rem;
+}
+
+.fa-brands:hover {
+    color: #0dbcf6;
+}
+
+
+.footer {
+    position: absolute;
+    text-align: center;
+
+}
+
+.copy {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: block;
+
+}
+
+.copy .contact {
+    color: #0dbcf6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.copy .contact:hover {
+    color: #0dbcf6;
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    .email-container {
+        position: absolute;
+        text-align: center;
+        top: 30%;
+        right: 0%;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .overlay-text {
+        font-size: 1.8rem;
+        top: 17%;
+    }
+
+    .below-text {
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+        padding: 10px;
+        width: 18rem;
+        right: 2%;
+        position: absolute;
+    }
+
+
+    .logo {
+        width: 85%;
+    }
+
+    .contact-us {
+        font-size: 2.5rem;
+    }
+
+    .call-us,
+    .email-us {
+        font-size: 1.7rem;
+        padding: 6px 10px;
+        margin-left: 0rem;
+    }
+
+    .button-container1 {
+        display: flex;
+        margin-bottom: 0.5rem;
+        gap: 1.5rem;
+
+    }
+
+    .sm_icons {
+        width: 2rem;
+        height: auto;
+        margin: 0.3rem;
+    }
+
+    .fa-brands {
+        font-size: 1.7rem;
+        width: 2rem;
+        margin-top: 1rem;
+    }
+
+    #social-links {
+        padding-bottom: 1rem;
+        gap: 5px;
+    }
+
+    .button-container1 {
+        gap: 4rem;
+    }
+
+
+    .menu-btn {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        display: block;
+    }
+
+    .navbar {
+        height: 40px;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links ul li {
+        margin: 10px 0;
+    }
+
+    .navbar.scrolled {
+        background-color: rgba(118, 231, 251, 0.491);
+        height: 90px;
+    }
+
+    .navbar.scrolled .logo img {
+        height: 30px;
+        border-radius: 10px;
+    }
+
+
+
+}
+
+/*- Hamburger Menu --- */
+
+.hamburger-menu {
+    display: block;
+    background: transparent;
+    border: none;
+
+}
+
+.hamburger-menu img {
+    width: 50px;
+    height: auto;
+}
+
+.hamburger-links {
+    display: none;
+    position: fixed;
+    top: 120px;
+    margin: 0 auto;
+    width: 30%;
+    background-color: #49a9bccb;
+    z-index: 999;
+    text-align: center;
+    padding: 1dvh;
+}
+
+.hamburger-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+.hamburger-links ul li {
+    margin: 10px 0;
+}
+
+.hamburger-links ul li a {
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.hamburger-links ul li a:hover {
+    color: #0dbcf6;
+}
+
+.hamburger-menu.active+.hamburger-links {
+    display: block;
+}
+
+
+@media screen and (min-width: 769px) {
+    .nav-links {
+        display: flex;
+    }
+
+    .hamburger-links {
+        display: none;
+    }
+}
