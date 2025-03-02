@@ -361,6 +361,7 @@ h1 {
     .hamburger-menu img {
         width: 50px;
         height: auto;
+        filter: drop-shadow(0 0 4px rgba(255, 255, 255, 9.87));
     }
 
     .hamburger-links {

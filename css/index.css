@@ -895,10 +895,19 @@ video::-webkit-media-controls {
         color: #ffffff;
     }
 
+    #videoOverlay video {
+        transform: none !important;
+        rotate: 0deg !important;
+
+    }
+
+
 
     #social-links {
         padding-bottom: 1rem;
         gap: 5px;
+        position: relative;
+        z-index: 3000;
     }
 
     .fa-brands {

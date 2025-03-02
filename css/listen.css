@@ -228,15 +228,22 @@ section {
 
 @media (max-width: 768px) {
 
-    #video iframe,
     #music iframe {
         width: 90%;
     }
 
-    #video {
+    #video iframe {
+
+        width: 85vw;
         height: auto;
-        padding: 2rem 0;
-        padding-bottom: 3rem;
+    }
+
+    section {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px 0;
+        margin-bottom: -10rem;
     }
 
     .glowing-btn {
@@ -339,6 +346,9 @@ section {
         margin-top: 1rem;
     }
 
+    footer {
+        margin-top: 10rem;
+    }
 
     @media screen and (min-width: 769px) {
         .nav-links {
