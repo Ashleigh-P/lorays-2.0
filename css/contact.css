@@ -26,6 +26,8 @@ html {
 .navbar {
     position: fixed;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -83,7 +85,7 @@ html {
     text-align: center;
     margin: 0 auto;
     background: #000000a4;
-    border-radius: 10px;
+    border-radius: 15px;
 
 }
 
@@ -157,10 +159,6 @@ html {
     flex-grow: 1;
 }
 
-.logo {
-    width: 100%;
-    position: relative;
-}
 
 main {
     display: flex;
@@ -178,90 +176,6 @@ main {
     cursor: pointer;
     padding: 10px;
     z-index: 1000;
-}
-
-.button-container {
-    display: flex;
-    gap: 3rem;
-}
-
-.call-us,
-.email-us {
-    font-family: "Orbitron", sans-serif !important;
-    display: inline-block;
-    position: relative;
-    padding: 10px 20px;
-    background: linear-gradient(45deg, #2e293b, #04acf4);
-    color: #f3f0f0;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    text-decoration: none;
-    font-family: monospace;
-    font-size: 2rem;
-    box-shadow: 0 0 15px rgb(60, 149, 179), 0 0 20px rgb(241, 243, 245);
-}
-
-.call-us:hover,
-.email-us:hover {
-    background: linear-gradient(45deg #e6e6e6, #34e1ff);
-
-    box-shadow: 0 0 20px rgb(238, 17, 227), 0 0 30px rgba(6, 182, 212, 0.8);
-
-}
-
-.call-us:active,
-.email-us:active {
-    transform: scale(0.95);
-    box-shadow: 0 0 15px rgb(59, 159, 246), 0 0 20px rgba(212, 6, 202, 0.5);
-}
-
-.call-us a,
-.email-us a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.call-us a:hover,
-.email-us a:hover {
-    color: #000000;
-    text-decoration: none;
-}
-
-
-.buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
-    margin-top: 15rem;
-}
-
-.button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 0.8rem;
-    color: white;
-    text-decoration: none;
-    font-size: 2rem;
-    transition: background-color 0.3s ease;
-}
-
-.call-button {
-    background-color: #68d7f5;
-}
-
-.call-button:hover {
-    background-color: #000000;
-}
-
-.email-button {
-    background-color: #000000;
-}
-
-.email-button:hover {
-    background-color: #000000;
 }
 
 #social-links {
@@ -365,7 +279,7 @@ main {
 
     .overlay-text {
         font-size: 1.4rem;
-        top: 16%;
+        top: 17%;
     }
 
     .below-text {
@@ -376,11 +290,6 @@ main {
         transform: translateX(-50%);
         text-align: center;
         position: inherit;
-    }
-
-
-    .logo {
-        width: 85%;
     }
 
     .contact-us {
@@ -459,62 +368,61 @@ main {
 
     .navbar.scrolled .logo img {
         height: 30px;
+        background: #000000a4;
         border-radius: 10px;
     }
 
+    /*- Hamburger Menu --- */
 
+    .hamburger-menu {
+        display: block;
+        background: transparent;
+        border: none;
 
-}
+    }
 
-/*- Hamburger Menu --- */
+    .hamburger-menu img {
+        width: 50px;
+        height: auto;
+    }
 
-.hamburger-menu {
-    display: block;
-    background: transparent;
-    border: none;
+    .hamburger-links {
+        display: none;
+        position: fixed;
+        top: 94px;
+        margin: 0 auto;
+        width: 45%;
+        background-color: #49a9bccb;
+        z-index: 999;
+        text-align: center;
+        padding: 0.5rem;
+    }
 
-}
+    .hamburger-links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
 
-.hamburger-menu img {
-    width: 50px;
-    height: auto;
-}
+    .hamburger-links ul li {
+        margin: 10px 0;
+    }
 
-.hamburger-links {
-    display: none;
-    position: fixed;
-    top: 120px;
-    margin: 0 auto;
-    width: 30%;
-    background-color: #49a9bccb;
-    z-index: 999;
-    text-align: center;
-    padding: 1dvh;
-}
+    .hamburger-links ul li a {
+        font-size: 1.4rem;
+        color: #fff;
+        text-decoration: none;
+    }
 
-.hamburger-links ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex-direction: column;
-}
+    .hamburger-links ul li a:hover {
+        color: #0dbcf6;
+    }
 
-.hamburger-links ul li {
-    margin: 10px 0;
-}
-
-.hamburger-links ul li a {
-    font-size: 1.4rem;
-    color: #fff;
-    text-decoration: none;
-}
-
-.hamburger-links ul li a:hover {
-    color: #0dbcf6;
-}
-
-.hamburger-menu.active+.hamburger-links {
-    display: block;
+    .hamburger-menu.active+.hamburger-links {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 

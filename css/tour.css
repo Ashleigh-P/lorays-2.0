@@ -285,6 +285,57 @@ h1 {
 
 }
 
+.merch-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.merch-button-toggle {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    width: 60px;
+    height: 180px;
+    cursor: pointer;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.merch-button-toggle i {
+    font-size: 2rem;
+    animation: none;
+    filter: drop-shadow(0 0 5px rgb(0, 247, 255));
+}
+
+.merch-link .merch-button .merch-button-toggle i {
+    transition: all 0.3s ease-in-out;
+    animation: flash 1s infinite;
+}
+
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 
 @media (max-width: 768px) {
     .tour-item {
