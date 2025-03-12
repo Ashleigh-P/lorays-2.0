@@ -295,7 +295,7 @@ section {
         margin: 0 auto;
         text-align: center;
         padding: 20px 0;
-        margin-bottom: -10rem;
+        margin-bottom: -15rem;
     }
 
     .glowing-btn {
@@ -399,7 +399,7 @@ section {
     }
 
     footer {
-        margin-top: 10rem;
+        margin-top: 15rem;
     }
 
     @media screen and (min-width: 769px) {
