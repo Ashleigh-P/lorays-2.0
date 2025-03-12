@@ -245,7 +245,7 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 5px;
-    padding-bottom: 1rem;
+    padding-top: 10rem;
 }
 
 .fa-brands {
@@ -317,7 +317,6 @@ h1 {
     transition: all 0.3s ease-in-out;
     animation: flash 1s infinite;
 }
-
 
 @keyframes flash {
     0% {
