@@ -1,21 +1,28 @@
+@font-face {
+    /* use for small print */
+    font-family: 'exan';
+    src: url('../fonts/exan-3/Exan-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'microg';
+    /* use for the body */
+    src: url('../fonts/Microgram/Microgram\ DB\ Regular.ttf') format('truetype');
+}
+
+
 body,
 html {
-    font-family: "Orbitron", sans-serif;
+    font-family: 'microg', sans-serif;
     margin: 0 auto;
     text-align: center;
     background: #000000;
     color: #ffffff;
 }
 
-.orbitron-lorays {
-    font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
 /* Navbar */
 .navbar {
+    font-family: 'exan', sans-serif;
     position: fixed;
     top: 0;
     width: 100%;
@@ -257,7 +264,7 @@ section {
 }
 
 .copy {
-    font-family: "Orbitron", sans-serif;
+    font-family: 'exan', sans-serif;
     font-size: 1rem;
     text-align: center;
     color: rgb(255, 255, 255);

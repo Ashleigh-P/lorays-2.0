@@ -1,11 +1,22 @@
-/* Box styling rules */
+@font-face {
+    /* use for small print */
+    font-family: 'exan';
+    src: url('../fonts/exan-3/Exan-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'microg';
+    /* use for the body */
+    src: url('../fonts/Microgram/Microgram\ DB\ Regular.ttf') format('truetype');
+}
+
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* Remove default margin */
 body,
 h1,
 h2,
@@ -17,17 +28,17 @@ blockquote,
 dl,
 dd {
     margin: 0;
+    font-family: 'microg', sans-serif;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    font-family: "Orbitron", sans-serif;
+    font-family: 'exan', sans-serif;
 
 }
 
-/* Remove list styles on ul, ol elements */
 ul [role="list"],
 ol [role="list"] {
     list-style: none;
@@ -43,7 +54,6 @@ main {
 }
 
 body {
-    font-family: "Orbitron", sans-serif;
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
@@ -58,7 +68,7 @@ input,
 button,
 textarea,
 select {
-    font-family: "Orbitron", sans-serif;
+    font-family: 'exan', sans-serif;
 }
 
 header {
@@ -69,6 +79,7 @@ header {
 
 /* Navbar */
 .navbar {
+    font-family: 'exan', sans-serif;
     position: fixed;
     top: 0;
     width: 100%;
@@ -206,7 +217,6 @@ header {
 
 
 body {
-    font-family: "Orbitron", sans-serif;
     font-size: 1rem;
     padding: 2rem 0;
     background-color: rgb(0, 0, 0);
@@ -255,7 +265,7 @@ body {
 }
 
 .card__title {
-    font-family: "Orbitron", sans-serif;
+    font-family: 'exan', sans-serif;
     font-size: 1.2rem;
     line-height: 1.1;
 }
@@ -289,6 +299,7 @@ a {
 }
 
 .copy {
+    font-family: 'exan', sans-serif;
     font-size: 1rem;
     text-align: center;
     color: rgb(255, 255, 255);

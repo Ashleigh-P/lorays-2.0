@@ -1,21 +1,29 @@
+@font-face {
+    /* use for small print */
+    font-family: 'exan';
+    src: url('../fonts/exan-3/Exan-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'microg';
+    /* use for the body */
+    src: url('../fonts/Microgram/Microgram\ DB\ Regular.ttf') format('truetype');
+}
+
+
 body {
+    font-family: 'microg', sans-serif;
     margin: 0 auto;
     background-color: #111;
     color: #fff;
-    font-family: "Orbitron", sans-serif;
 
 }
 
-.orbitron-lorays {
-    font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
 
 
 /* Navbar */
 .navbar {
+    font-family: 'exan', sans-serif;
     position: fixed;
     top: 0;
     width: 100%;
@@ -147,9 +155,10 @@ body {
 }
 
 h1 {
+    font-family: 'exan', sans-serif;
+    font-size: 3rem;
     text-align: center;
     color: rgb(180, 254, 253);
-    text-transform: uppercase;
     margin-bottom: 3rem;
     margin-top: 2rem;
 }
@@ -206,8 +215,7 @@ h1 {
 
 .show-map-button,
 .close-map-button {
-    font-family: "Orbitron", sans-serif;
-
+    font-family: 'microg', sans-serif;
     background-color: rgb(32, 137, 163);
     color: #fff;
     border: none;
@@ -265,7 +273,7 @@ h1 {
 }
 
 .copy {
-    font-family: "Orbitron", sans-serif;
+    font-family: 'exan', sans-serif;
     font-size: 1rem;
     text-align: center;
     color: rgb(255, 255, 255);
