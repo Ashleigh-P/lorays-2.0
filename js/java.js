@@ -17,11 +17,34 @@
         }
       });
 
-      document.querySelector('.message-box-toggle').addEventListener('click', function () {
-        const content = document.querySelector('.message-box-content');
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-      });
-      
+// Toggle the visibility of the message box
+document.querySelector('.message-box-toggle').addEventListener('click', function () {
+  const content = document.querySelector('.message-box-content');
+  content.style.display = content.style.display === 'block' ? 'none' : 'block';
+});
+
+// Initialize EmailJS
+(function() {
+  emailjs.init('6OwlV7DvXGi7q4dqm');  // Replace with your actual Public Key
+})();
+
+// Handle form submission for sending the email
+document.getElementById('message-form').addEventListener('submit', function (event) {
+  event.preventDefault();  // Prevent the form from reloading the page
+
+  var formData = new FormData(event.target);
+
+  // Send the form data using EmailJS
+  emailjs.sendForm('service_nfb3g98', 'template_dlepj8s', event.target, '6OwlV7DvXGi7q4dqm')
+    .then(function(response) {
+      alert('Message sent successfully!');
+    }, function(error) {
+      alert('Failed to send message: ' + error.text);
+    });
+
+  // Optionally, close the message box after sending
+  document.querySelector('.message-box-content').style.display = 'none';
+});
       document.getElementById('transitionButton').addEventListener('click', function () {
         var overlay = document.getElementById('videoOverlay');
         var video = document.getElementById('transitionVideo');
