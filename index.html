@@ -63,17 +63,6 @@
     </div>
 
     <main>
-
-      <!--<section id="updates">
-        <div class="updates">
-          <h1>Latest Info</h1>
-          <p>
-            Lo Rays are busy developing new music, videos and more exciting BTS
-            footage for everyone! Stay tuned!!!
-          </p>
-        </div>
-      </div>-->
-
       </section>
       <section id="about">
         <div class="content">
@@ -132,25 +121,35 @@
           </div>
         </div>
 
-      <section id="mailing-list" class="item1">
-        <form action="https://gmail.us3.list-manage.com/subscribe/post?u=59255a0b13aa082ea1284d152&amp;id=1f3e6a48b5&amp;f_id=00d6dfe3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">            
-            <h3>Join our Mailing List</h3>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="FNAME" placeholder="Your Name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="EMAIL" placeholder="Your Email" required>
-            <br>
+        <section id="mailing-list" class="item1">
+          <form action="https://gmail.us3.list-manage.com/subscribe/post?u=59255a0b13aa082ea1284d152&amp;id=1f3e6a48b5" 
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
+              
+              <h3>Join our Mailing List</h3>
+              
+              <label for="mce-FNAME">Name:</label>
+              <input type="text" id="mce-FNAME" name="FNAME" placeholder="Your Name">
+              
+              <label for="mce-EMAIL">Email:</label>
+              <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="Your Email" required>
+      
+              <!-- Hidden anti-bot field (DO NOT REMOVE) -->
+              <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                  <input type="text" name="b_59255a0b13aa082ea1284d152_1f3e6a48b5" tabindex="-1" value="">
+              </div>
+      
+              <!-- Optional Redirect -->
+              <input type="hidden" name="redirect" value="https://ashleigh-p.github.io/lorays-2.0/">
+      
+              <br>
+              <div class="button-container">
+                  <button class="glowing-btn" id="transitionButton" type="submit">
+                      <span class="glowing-txt">Subs<span class="faulty-letter">ri</span>be</span>
+                  </button>
+              </div>
+          </form>
+      </section>
 
-            <div class="button-container">
-            <button class="glowing-btn" id="transitionButton">
-                <span class="glowing-txt">Subs<span class="faulty-letter">ri</span>be</span>
-            </button>
-          </div>
-          <div id="videoOverlay" class="button-vid-overlay">
-            <video id="transitionVideo" src="vid/new_index_vid.mp4" controls="false" playsinline></video>
-          </div>          
-        </form>
-    </section>
 
 
                   
@@ -233,6 +232,7 @@
       </section>
   
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script src="js/java.js"></script>
   </body>
