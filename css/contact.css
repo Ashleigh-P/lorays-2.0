@@ -23,7 +23,6 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    background-color: #001409;
     text-align: center;
 }
 
@@ -166,14 +165,6 @@ html {
 }
 
 
-main {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    margin-bottom: 2rem;
-}
 
 .menu-btn {
     color: #00f2ff;
@@ -194,23 +185,33 @@ main {
 
 
 .email-container {
-    position: relative;
+    padding: 2rem;
+    padding-top: 5rem;
     text-align: center;
-    padding: 1rem;
-}
-
-.email-container img {
-    display: block;
-    margin: 4rem auto 0 auto;
+    max-width: 600px;
+    margin: 0 auto;
     width: 100%;
-    max-width: 300px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.below-text,
-.below-text-man {
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.image-row img {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+}
+
+.below-text {
+    text-align: center;
     margin-top: 10px;
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
@@ -280,20 +281,28 @@ main {
 
 
 
-    .below-text-man,
+
     .below-text {
+        text-align: center;
         font-size: 1rem;
         letter-spacing: 0.15rem;
         text-transform: lowercase;
     }
 
-    .email-container img {
-        max-width: 200px;
-        margin: 5rem auto 0 auto;
+    .email-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
         padding-top: 5rem;
+    }
 
+    .image-row {
+        flex-direction: column;
+        align-items: center;
+    }
 
-
+    .image-row img {
+        width: 120px;
     }
 
 
