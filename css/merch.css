@@ -381,7 +381,7 @@ a {
 
         padding-inline: 0rem;
         box-sizing: border-box;
-        /* crucial! */
+
         width: 100%;
         margin: 0 auto;
     }
