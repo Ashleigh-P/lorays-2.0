@@ -198,7 +198,7 @@ html {
 #press h4 {
     padding: 1rem 3rem;
     text-align: center;
-    font-family: 'gransan' sans-serif;
+    font-family: 'gransan', sans-serif;
     font-style: italic;
     color: #fff;
     font-size: 1.25rem;
@@ -882,7 +882,7 @@ html {
     }
 
     .hamburger-links ul li a {
-        font-size: 1.4rem;
+        font-size: 1rem;
         color: #fff;
         text-decoration: none;
     }

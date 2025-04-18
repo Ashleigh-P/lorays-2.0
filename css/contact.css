@@ -7,37 +7,54 @@
 @font-face {
     font-family: 'microg';
     /* use for the body */
-    src: url('../fonts/Microgram/Microgram\ DB\ Regular.ttf') format('truetype');
+    src: url('../fonts/micro-bold/Microgramma\ D\ Extended\ Bold.otf') format('opentype');
 }
+
+@font-face {
+    font-family: 'gransan';
+    /* use for the body */
+    src: url('../fonts/GranSanMn/grantha-sangam-mn-regular.otf') format('opentype');
+}
+
 
 body,
 html {
-    font-family: 'microg', sans-serif;
+    font-family: 'gransan', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url('../img/band1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: black;
     color: white;
     text-align: center;
 }
 
+.hero {
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-bg {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
 /* Navbar */
 .navbar {
-    font-family: 'exan', sans-serif;
+    font-family: 'microg', sans-serif;
+    text-transform: uppercase;
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 0 20px;
     z-index: 1000;
     box-shadow: none;
     background-color: transparent;
@@ -47,28 +64,29 @@ html {
 
 /* Navigation Links */
 .nav-links {
-    flex: 1;
+    width: 100%;
+    margin-top: 10px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .nav-links .active {
     display: none;
 }
 
-.nav-links:first-child {
-    justify-content: flex-end;
-}
+
 
 .nav-links ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-links ul li {
-    margin: 0 30px;
+    margin: 0 20px;
 }
 
 .nav-links ul li a {
@@ -81,7 +99,7 @@ html {
 }
 
 .nav-links ul li a:hover {
-    color: #000000;
+    color: #8fcdff;
 }
 
 
@@ -91,7 +109,6 @@ html {
     margin: 0 auto;
     background: #000000a4;
     border-radius: 15px;
-
 }
 
 .logo img {
@@ -100,10 +117,15 @@ html {
 }
 
 .navbar.scrolled {
-    background-color: rgba(6, 94, 116, 0.874);
-    height: 85px;
+    background-color: #8fcdff;
+    height: 115px;
     padding: 0;
 }
+
+.navbar.scrolled :hover {
+    color: #000000;
+}
+
 
 .navbar.scrolled .logo img {
     height: 70px;
@@ -122,7 +144,7 @@ html {
     top: 80px;
     right: 0;
     left: 0;
-    background-color: rgba(21, 200, 245, 0.9);
+    background-color: #8fcdff;
     z-index: 999;
     text-align: center;
     padding: 20px;
@@ -147,7 +169,7 @@ html {
 }
 
 .hamburger-links ul li a:hover {
-    color: #0dbcf6;
+    color: #8fcdff;
 }
 
 .hamburger-menu.active+.hamburger-links {
@@ -185,23 +207,26 @@ html {
 
 
 .email-container {
-    padding: 2rem;
-    padding-top: 5rem;
+    font-family: 'gransan', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
     text-align: center;
+    z-index: 2;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 90%;
     max-width: 600px;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .image-row {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
 }
 
 .image-row img {
@@ -211,20 +236,33 @@ html {
 }
 
 .below-text {
+    font-family: 'gransan' sans-serif;
     text-align: center;
     margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     letter-spacing: 0.1rem;
     text-transform: lowercase;
     word-wrap: break-word;
     overflow-wrap: break-word;
     word-break: break-word;
-    background-color: #065e7498;
+    background-color: #43434398;
     border-radius: 20px;
     padding: 0.5rem 1rem;
     display: block;
     color: #fff;
 }
+
+.below-text a {
+    text-decoration: none;
+    font-style: italic;
+    color: #0dbcf6;
+}
+
+.below-text a:hover {
+    color: #ffffff;
+}
+
+
 
 .fa-brands {
     color: #fff;
@@ -235,7 +273,7 @@ html {
 }
 
 .fa-brands:hover {
-    color: #0dbcf6;
+    color: #8fcdff;
 }
 
 
@@ -256,13 +294,13 @@ html {
 }
 
 .copy .contact {
-    color: #0dbcf6;
+    color: #8fcdff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .copy .contact:hover {
-    color: #0dbcf6;
+    color: #ac79fd;
 
 }
 
@@ -278,40 +316,40 @@ html {
         padding: 10px;
     }
 
-
-
-
-
-    .below-text {
-        text-align: center;
-        font-size: 1rem;
-        letter-spacing: 0.15rem;
-        text-transform: lowercase;
+    .hero {
+        margin-top: 20vh
     }
 
     .email-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 0.5rem;
-        padding-top: 5rem;
+        margin-top: 17vh;
+        padding: 1rem;
+        max-width: 90%;
     }
 
     .image-row {
-        flex-direction: column;
+        display: flex;
+        justify-content: center;
         align-items: center;
+        padding-bottom: 0.5rem;
     }
 
     .image-row img {
-        width: 120px;
+        width: 90px;
+        margin-bottom: 1rem;
     }
 
-
+    .below-text {
+        margin-top: -9vh;
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
 
     .sm_icons {
         width: 2rem;
         height: auto;
         margin: 0.3rem;
     }
+
 
     .fa-brands {
         font-size: 1.7rem;
@@ -320,7 +358,7 @@ html {
     }
 
     #social-links {
-        padding-bottom: 1rem;
+        margin-top: 40vh;
         gap: 5px;
     }
 
@@ -359,13 +397,12 @@ html {
     }
 
     .navbar.scrolled {
-        background-color: rgba(118, 231, 251, 0.491);
+        background-color: #8fcdff;
         height: 90px;
     }
 
     .navbar.scrolled .logo img {
         height: 30px;
-        background: #000000a4;
         border-radius: 10px;
     }
 
@@ -381,6 +418,8 @@ html {
     .hamburger-menu img {
         width: 50px;
         height: auto;
+        filter: drop-shadow(0 0 4px rgba(255, 255, 255, 9.87));
+
     }
 
     .hamburger-links {
@@ -388,8 +427,8 @@ html {
         position: fixed;
         top: 94px;
         margin: 0 auto;
-        width: 45%;
-        background-color: #49a9bccb;
+        width: 55%;
+        background-color: #8fcdffc1;
         z-index: 999;
         text-align: center;
         padding: 0.5rem;
@@ -407,18 +446,17 @@ html {
     }
 
     .hamburger-links ul li a {
-        font-size: 1.4rem;
+        font-size: 1rem;
         color: #fff;
         text-decoration: none;
     }
 
     .hamburger-links ul li a:hover {
-        color: #0dbcf6;
+        color: #000000;
     }
 
     .hamburger-menu.active+.hamburger-links {
-        display: flex;
-        flex-direction: column;
+        display: block;
     }
 }
 
