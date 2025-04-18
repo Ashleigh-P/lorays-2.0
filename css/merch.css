@@ -259,15 +259,16 @@ body {
 
 .card {
     aspect-ratio: 1 / 1.5;
-    /*border: 3px solid white;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .card__content {
     background: #8fcdffc1;
     border-radius: 0.9rem;
     color: #fff;
-    align-self: end;
-    margin: .5rem .5rem 2rem;
+    margin-top: 0;
     padding: 0.5rem;
     box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
 }
@@ -296,6 +297,7 @@ a {
     width: 100%;
     aspect-ratio: 1 / 1.25;
     object-fit: cover;
+    margin-bottom: 0.5rem;
 }
 
 .special-alert {
@@ -376,20 +378,25 @@ a {
 
 @media only screen and (max-width: 768px) {
     .container {
-        padding-inline: 0;
+
+        padding-inline: 0rem;
+        box-sizing: border-box;
+        /* crucial! */
+        width: 100%;
+        margin: 0 auto;
     }
 
     .product-grid {
-        padding: 0.5rem;
+        padding: 1.2rem;
     }
 
     .card__content {
         position: relative;
-        top: 18%;
+        top: -5%;
     }
 
     .card__img {
-        padding-top: 5vh;
+        padding: 5vh;
     }
 
 
@@ -501,7 +508,7 @@ a {
 
     .product-grid {
         padding: 1rem;
-        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     }
 
     .card__content {
