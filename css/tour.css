@@ -7,7 +7,13 @@
 @font-face {
     font-family: 'microg';
     /* use for the body */
-    src: url('../fonts/Microgram/Microgram\ DB\ Regular.ttf') format('truetype');
+    src: url('../fonts/micro-bold/Microgramma\ D\ Extended\ Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'gransan';
+    /* use for the body */
+    src: url('../fonts/GranSanMn/grantha-sangam-mn-regular.otf') format('opentype');
 }
 
 
@@ -23,12 +29,13 @@ body {
 
 /* Navbar */
 .navbar {
-    font-family: 'exan', sans-serif;
+    font-family: 'microg', sans-serif;
+    text-transform: uppercase;
     position: fixed;
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding: 0 20px;
     z-index: 1000;
@@ -40,28 +47,29 @@ body {
 
 /* Navigation Links */
 .nav-links {
-    flex: 1;
+    width: 100%;
+    margin-top: 10px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .nav-links .active {
     display: none;
 }
 
-.nav-links:first-child {
-    justify-content: flex-end;
-}
+
 
 .nav-links ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-links ul li {
-    margin: 0 30px;
+    margin: 0 20px;
 }
 
 .nav-links ul li a {
@@ -74,7 +82,7 @@ body {
 }
 
 .nav-links ul li a:hover {
-    color: #3fdcf5;
+    color: #8fcdff;
 }
 
 
@@ -84,7 +92,6 @@ body {
     margin: 0 auto;
     background: #000000a4;
     border-radius: 15px;
-
 }
 
 .logo img {
@@ -93,10 +100,15 @@ body {
 }
 
 .navbar.scrolled {
-    background-color: rgba(6, 94, 116, 0.874);
-    height: 85px;
+    background-color: #8fcdff;
+    height: 115px;
     padding: 0;
 }
+
+.navbar.scrolled :hover {
+    color: #000000;
+}
+
 
 .navbar.scrolled .logo img {
     height: 70px;
@@ -115,7 +127,7 @@ body {
     top: 80px;
     right: 0;
     left: 0;
-    background-color: rgba(21, 200, 245, 0.9);
+    background-color: #8fcdff;
     z-index: 999;
     text-align: center;
     padding: 20px;
@@ -140,7 +152,7 @@ body {
 }
 
 .hamburger-links ul li a:hover {
-    color: #0dbcf6;
+    color: #8fcdff;
 }
 
 .hamburger-menu.active+.hamburger-links {
@@ -155,10 +167,11 @@ body {
 }
 
 h1 {
-    font-family: 'exan', sans-serif;
+    font-family: 'microg', sans-serif;
+    text-transform: uppercase;
     font-size: 3rem;
     text-align: center;
-    color: rgb(180, 254, 253);
+    color: #8fcdff;
     margin-bottom: 3rem;
     margin-top: 2rem;
 }
@@ -179,32 +192,37 @@ h1 {
 }
 
 .date {
+
     font-weight: bold;
     text-align: center;
     color: #ffffff;
 }
 
 .venue {
+    font-family: 'gransan' sans-serif;
     text-align: center;
-    text-transform: uppercase;
 }
 
 .tickets {
+    font-family: 'gransan' sans-serif;
+
     text-align: center;
 }
 
 .tickets a {
     display: inline-block;
     padding: 10px 15px;
-    background: rgb(139, 143, 141);
-    color: #fff;
+    background:
+        #8fcdff;
+    color: #000000;
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
 }
 
 .tickets a:hover {
-    background: rgb(32, 137, 163);
+    color: #fff;
+    background: #8f9091;
 }
 
 .hidden {
@@ -216,8 +234,8 @@ h1 {
 .show-map-button,
 .close-map-button {
     font-family: 'microg', sans-serif;
-    background-color: rgb(32, 137, 163);
-    color: #fff;
+    background-color: #8fcdff;
+    color: #000000;
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
@@ -229,8 +247,8 @@ h1 {
 
 
 .show-map-button:hover {
-    background-color: #a1c3e3;
-    color: #111
+    color: #fff;
+    background: #8f9091;
 }
 
 .close-map-button:hover {
@@ -265,7 +283,7 @@ h1 {
 }
 
 .fa-brands:hover {
-    color: #0dbcf6;
+    color: #8fcdff;
 }
 
 .footer {
@@ -283,13 +301,13 @@ h1 {
 }
 
 .copy .contact {
-    color: #0dbcf6;
+    color: #8fcdff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .copy .contact:hover {
-    color: #0dbcf6;
+    color: #ac79fd;
 
 }
 
@@ -385,7 +403,7 @@ h1 {
     }
 
     .navbar.scrolled {
-        background-color: rgba(118, 231, 251, 0.491);
+        background-color: #8fcdff;
         height: 90px;
     }
 
@@ -427,8 +445,8 @@ h1 {
         position: fixed;
         top: 120px;
         margin: 0 auto;
-        width: 30%;
-        background-color: #49a9bccb;
+        width: 55%;
+        background-color: #8fcdffc1;
         z-index: 999;
         text-align: center;
         padding: 0.5rem;
@@ -446,13 +464,13 @@ h1 {
     }
 
     .hamburger-links ul li a {
-        font-size: 1.4rem;
+        font-size: 1rem;
         color: #fff;
         text-decoration: none;
     }
 
     .hamburger-links ul li a:hover {
-        color: #0dbcf6;
+        color: #000000;
     }
 
     .hamburger-menu.active+.hamburger-links {
