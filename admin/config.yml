@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "bio"
+    label: "Band Bio"
+    files:
+      - label: "About Section"
+        name: "about"
+        file: "content/about.md"
+        fields:
+          - { label: "Bio Text", name: "body", widget: "markdown" }
+
+  - name: "press"
+    label: "Press Quotes"
+    folder: "content/press"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Quote", name: "quote", widget: "text" }
+      - { label: "Source", name: "source", widget: "string" }
+
+  - name: "tour"
+    label: "Tour Dates"
+    folder: "content/tour"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Venue", name: "venue", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
